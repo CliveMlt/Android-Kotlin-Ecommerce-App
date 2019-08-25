@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F3154"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/contact_form_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="16dp"
+        android:text="About Us"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Address:"
+        android:textColor="#fff"
+        android:textSize="29sp"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Meal Deal Limited"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Level 2, LM Complex"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Brewery Street"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Mriehel"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Birkirkara BKR3000"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Malta"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text=""
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact Details"
+        android:textColor="#fff"
+        android:textSize="29sp"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Phone: 21335520"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  E-Mail: info@mealdeal.com"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:typeface="serif" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="187dp"
+        app:srcCompat="@drawable/mealdeal" />
+
+
+</LinearLayout>
