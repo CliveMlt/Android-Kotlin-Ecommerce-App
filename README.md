@@ -13,30 +13,42 @@
 
 <br>
 
+---
+
 ### Main Page
 <img src="mainpage.png" width=400>
 
 <br>
+
+---
 
 ### Item 
 <img src="item.png" width=400>
 
 <br>
 
+---
+
 ### Tokens 
 <img src="tokens.png" width=400>
 
 <br>
+
+---
 
 ### Contact Us 
 <img src="contactus.png" width=400>
 
 <br>
 
+---
+
 ### About Us 
 <img src="aboutus.png" width=400>
 
 <br>
+
+---
 
 ## Products Adaptar
 ```
@@ -65,6 +77,8 @@ class ProductsAdapter(private val products: List<Product>) : RecyclerView.Adapte
 
 <br>
 
+---
+
 ## JSON Items
 ```
 {
@@ -75,6 +89,8 @@ class ProductsAdapter(private val products: List<Product>) : RecyclerView.Adapte
 ```
 
 <br>
+
+---
 
 ## External API
 ```
@@ -90,6 +106,5 @@ class ProductsAdapter(private val products: List<Product>) : RecyclerView.Adapte
             }
         }
 ```
-
 
 
