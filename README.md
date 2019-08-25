@@ -3,7 +3,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![Kotlin](https://img.shields.io/badge/kotlin-1.3.21-blue)
-![GitHub repo size](https://img.shields.io/badge/repo%20size-39.5MB-blue)
+![GitHub repo size](https://img.shields.io/badge/repo%20size-43.9MB-blue)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 <b>An E-Commerce application developed with Android Studio using Gson, a REST API and Kotlin.</b>
