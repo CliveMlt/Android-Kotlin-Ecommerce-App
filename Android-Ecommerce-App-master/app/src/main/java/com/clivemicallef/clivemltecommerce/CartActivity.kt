@@ -24,22 +24,30 @@ class CartActivity : AppCompatActivityWithDb() {
         }
 
         checkout.setOnClickListener {
+            val context = this
             doAsync {
                 super.db.cartDao().deleteAll()
-            }
-            AlertDialog.Builder(this)
-                    .setMessage("Your order has been successfully placed!")
-                    .setPositiveButton("OK") { _, _ ->
+                uiThread {
+                    AlertDialog.Builder(context)
+                            .setMessage("Your order has been successfully placed!")
+                            .setPositiveButton("OK") { _, _ ->
+                                cartText.text = ""
+                            }
+                            .create()
+                            .show()
+                }
 
-                    }
-                    .create()
-                    .show()
+            }
         }
 
 
         clear.setOnClickListener {
+            val context = this
             doAsync {
                 super.db.cartDao().deleteAll()
+                uiThread {
+                    cartText.text = ""
+                }
             }
         }
 
