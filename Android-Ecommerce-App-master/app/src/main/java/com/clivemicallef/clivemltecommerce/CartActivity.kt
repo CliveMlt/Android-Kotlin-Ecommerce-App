@@ -19,7 +19,27 @@ class CartActivity : AppCompatActivityWithDb() {
 
         doAsync {
             for (product in super.db.cartDao().getAll()) {
-                cartText.append("${product.name} - ${product.price} \n")
+                cartText.append("${product.name} - ${product.price} TOK\n")
+            }
+        }
+
+        checkout.setOnClickListener {
+            doAsync {
+                super.db.cartDao().deleteAll()
+            }
+            AlertDialog.Builder(this)
+                    .setMessage("Your order has been successfully placed!")
+                    .setPositiveButton("OK") { _, _ ->
+
+                    }
+                    .create()
+                    .show()
+        }
+
+
+        clear.setOnClickListener {
+            doAsync {
+                super.db.cartDao().deleteAll()
             }
         }
 

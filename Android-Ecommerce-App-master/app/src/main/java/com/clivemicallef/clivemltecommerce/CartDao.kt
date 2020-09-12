@@ -13,4 +13,7 @@ interface CartDao {
 
     @Insert
     fun insertAll(vararg users: CartProduct)
+
+    @Query("DELETE FROM cart_products")
+    fun deleteAll()
 }

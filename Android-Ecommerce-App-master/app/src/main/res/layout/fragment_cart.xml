@@ -14,7 +14,7 @@
         android:layout_marginBottom="16dp"
         android:text=""
         android:textColor="#fff"
-        android:textSize="15sp"
+        android:textSize="12sp"
         android:typeface="serif" />
 
 
@@ -29,7 +29,7 @@
         android:layout_alignParentBottom="true">
 
         <Button
-            android:id="@+id/Checkout"
+            android:id="@+id/checkout"
             style="@style/Widget.AppCompat.ActionButton"
             android:layout_width="0.0dip" android:layout_height="fill_parent"
             android:background="@color/colorPrimaryDark"
@@ -40,7 +40,7 @@
 
 
         <Button
-            android:id="@+id/Clear"
+            android:id="@+id/clear"
             style="@style/Widget.AppCompat.ActionButton"
             android:layout_width="0.0dip" android:layout_height="fill_parent"
             android:background="@color/colorPrimaryDark"
