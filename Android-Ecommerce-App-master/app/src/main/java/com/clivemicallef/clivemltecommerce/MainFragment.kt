@@ -19,7 +19,7 @@ class MainFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_main, container, false)
 
         doAsync {
-            val json = URL("https://api.myjson.com/bins/18ypo0").readText()
+            val json = URL("https://europe-west1-releva-248016.cloudfunctions.net/product-feed").readText()
 
 
 

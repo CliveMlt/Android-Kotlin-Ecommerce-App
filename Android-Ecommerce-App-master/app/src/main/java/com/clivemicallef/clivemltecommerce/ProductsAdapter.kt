@@ -16,7 +16,7 @@ class ProductsAdapter(private val products: List<Product>) : RecyclerView.Adapte
         val product = products[position]
         Picasso.get().load(product.photoUrl).into(holder.image)
         holder.title.text = product.title
-        holder.price.text = product.price
+        holder.price.text = product.price.toString()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -26,7 +26,7 @@ class ProductsAdapter(private val products: List<Product>) : RecyclerView.Adapte
             val intent = Intent(parent.context, ProductDetails::class.java)
             intent.putExtra("title", products[holder.adapterPosition].title)
             intent.putExtra("photo_url", products[holder.adapterPosition].photoUrl)
-            intent.putExtra("price", products[holder.adapterPosition].price)
+            intent.putExtra("price", products[holder.adapterPosition].price.toString())
             parent.context.startActivity(intent)
         }
         return holder

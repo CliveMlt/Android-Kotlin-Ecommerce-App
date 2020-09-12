@@ -9,6 +9,6 @@ data class Product(
         @SerializedName("photo_url")
         val photoUrl: String,
 
-        //val price: Double
-        val price: String
+        @SerializedName("price")
+        val price: Double
 )
