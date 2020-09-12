@@ -11,20 +11,20 @@
             android:orderInCategory="100"
             android:title="Home"
             app:showAsAction="never"/>
+        <item
+            android:id="@+id/actionCart"
+            android:icon="@drawable/ic_monetization_on_black_24dp"
+            android:orderInCategory="100"
+            android:title="Cart"
+            app:showAsAction="never"/>
 
         <item
-            android:id="@+id/actionguide"
+            android:id="@+id/actionTokens"
             android:icon="@drawable/ic_monetization_on_black_24dp"
             android:orderInCategory="100"
             android:title="Tokens"
             app:showAsAction="never"/>
 
-        <item
-            android:id="@+id/actionJeans"
-            android:icon="@drawable/ic_monetization_on_black_24dp"
-            android:orderInCategory="100"
-            android:title="Contact Us"
-            app:showAsAction="never"/>
 
         <item
             android:id="@+id/actionAboutus"

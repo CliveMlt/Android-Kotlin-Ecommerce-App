@@ -25,11 +25,6 @@ class MainActivity : AppCompatActivity() {
                             .replace(R.id.frameLayout, MainFragment())
                             .commit()
                 }
-                R.id.actionJeans -> {
-                    supportFragmentManager.beginTransaction()
-                            .replace(R.id.frameLayout, JeansFragment())
-                            .commit()
-               }
 
                 R.id.actionAboutus -> {
                     supportFragmentManager.beginTransaction()
@@ -37,15 +32,18 @@ class MainActivity : AppCompatActivity() {
                             .commit()
                 }
 
-                R.id.actionguide -> {
+                R.id.actionTokens -> {
                     supportFragmentManager.beginTransaction()
-                            .replace(R.id.frameLayout, GuideFragment())
+                            .replace(R.id.frameLayout, TokensFragment())
                             .commit()
                 }
 
-               // R.id.actionShorts -> {
-               //     d("Clive", "shorts was pressed!")
-               // }
+                R.id.actionCart -> {
+                    supportFragmentManager.beginTransaction()
+                            .replace(R.id.frameLayout, CartFragment())
+                            .commit()
+                }
+
             }
             it.isChecked = true
             drawerLayout.closeDrawers()
