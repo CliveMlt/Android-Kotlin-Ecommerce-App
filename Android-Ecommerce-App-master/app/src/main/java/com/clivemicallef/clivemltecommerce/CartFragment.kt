@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AlertDialog
 import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,9 +15,9 @@ import org.jetbrains.anko.uiThread
 
 class CartFragment : Fragment() {
 
-    private fun updateCartView(view: View, products: List<CartProduct>) {
+    private fun updateCartView(view: View, products: MutableList<CartProduct>) {
         view.recycler_view.apply {
-            layoutManager = GridLayoutManager(activity, 2)
+            layoutManager = LinearLayoutManager(activity)
             adapter = CartProductsAdapter(products)
             view.progressBar.visibility = View.GONE
         }
@@ -43,6 +44,7 @@ class CartFragment : Fragment() {
                     AlertDialog.Builder(activity)
                         .setMessage("Your order has been successfully placed!")
                         .setPositiveButton("OK") { _, _ ->
+                            activity.finish()
                         }
                         .create()
                         .show()
@@ -53,16 +55,11 @@ class CartFragment : Fragment() {
 
 
         root.clear.setOnClickListener {
-            val context = this
             doAsync {
                 dao.deleteAll()
                 val products = dao.getAll()
                 uiThread {
-                    root.recycler_view.apply {
-                        layoutManager = GridLayoutManager(activity, 2)
-                        adapter = CartProductsAdapter(products)
-                        root.progressBar.visibility = View.GONE
-                    }
+                    updateCartView(root, products)
                 }
             }
         }

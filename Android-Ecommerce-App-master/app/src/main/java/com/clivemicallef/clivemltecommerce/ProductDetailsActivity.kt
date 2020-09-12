@@ -31,8 +31,8 @@ class ProductDetailsActivity : AppCompatActivityWithDb() {
             }
             AlertDialog.Builder(this)
                     .setMessage("$title has been added to your cart!")
-                    .setPositiveButton("OK") { p0, p1 ->
-
+                    .setPositiveButton("OK") { _, _ ->
+                        finish()
                     }
                     .create()
                     .show()

@@ -9,11 +9,14 @@ import com.clivemicallef.clivemltecommerce.model.CartProduct
 @Dao
 interface CartDao {
     @Query("SELECT * FROM cart_products")
-    fun getAll(): List<CartProduct>
+    fun getAll(): MutableList<CartProduct>
 
     @Insert
-    fun insertAll(vararg users: CartProduct)
+    fun insertAll(vararg products: CartProduct)
 
     @Query("DELETE FROM cart_products")
     fun deleteAll()
+
+    @Delete
+    fun delete(vararg products: CartProduct)
 }
