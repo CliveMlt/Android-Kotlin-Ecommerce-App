@@ -6,8 +6,7 @@ import androidx.room.Room
 
 open class AppCompatActivityWithDb : AppCompatActivity() {
 
-    protected lateinit var db: AppDatabase
-
+    lateinit var db: AppDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
