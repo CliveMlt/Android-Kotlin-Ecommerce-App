@@ -3,10 +3,13 @@ package com.clivemicallef.clivemltecommerce
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import com.clivemicallef.clivemltecommerce.model.CartProduct
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.product_details.*
+import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.uiThread
 
-class ProductDetails : AppCompatActivity() {
+class ProductDetailsActivity : AppCompatActivityWithDb() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +26,9 @@ class ProductDetails : AppCompatActivity() {
         Picasso.get().load(photoUrl).into(photo)
 
         availability.setOnClickListener {
+            doAsync {
+                super.db.cartDao().insertAll(CartProduct(null, title, photoUrl, price.toDouble()))
+            }
             AlertDialog.Builder(this)
                     .setMessage("$title has been added to your cart!")
                     .setPositiveButton("OK") { p0, p1 ->

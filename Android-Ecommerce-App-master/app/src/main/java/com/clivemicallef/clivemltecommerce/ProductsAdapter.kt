@@ -23,7 +23,7 @@ class ProductsAdapter(private val products: List<Product>) : RecyclerView.Adapte
         val view = LayoutInflater.from(parent.context).inflate(R.layout.product_row, parent, false)
         val holder = ViewHolder(view)
         view.setOnClickListener {
-            val intent = Intent(parent.context, ProductDetails::class.java)
+            val intent = Intent(parent.context, ProductDetailsActivity::class.java)
             intent.putExtra("title", products[holder.adapterPosition].title)
             intent.putExtra("photo_url", products[holder.adapterPosition].photoUrl)
             intent.putExtra("price", products[holder.adapterPosition].price.toString())
