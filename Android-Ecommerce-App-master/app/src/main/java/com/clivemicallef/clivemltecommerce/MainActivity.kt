@@ -40,9 +40,8 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.actionCart -> {
-                    supportFragmentManager.beginTransaction()
-                            .replace(R.id.frameLayout, CartFragment())
-                            .commit()
+                    val intent = Intent(this.applicationContext, CartActivity::class.java)
+                    startActivity(intent)
                 }
 
             }

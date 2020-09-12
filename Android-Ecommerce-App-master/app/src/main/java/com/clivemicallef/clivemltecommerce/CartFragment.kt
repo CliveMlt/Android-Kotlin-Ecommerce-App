@@ -18,29 +18,36 @@ import java.net.URL
 
 class CartFragment : Fragment() {
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val root = inflater.inflate(R.layout.fragment_cart, container, false)
-        val dao = AppDatabase.getInstance(activity!!.applicationContext).cartDao()
+        val activity: CartActivity = this.activity as CartActivity
+        val dao = AppDatabase.getInstance(activity.applicationContext).cartDao()
         doAsync {
             val products = dao.getAll()
             println(products)
             uiThread {
-                //root.recycler_view.apply {
-                //    layoutManager = GridLayoutManager(activity, 2)
-                //    adapter = CartProductsAdapter(products)
-                //    root.progressBar.visibility = View.GONE
-                //}
+                root.recycler_view.apply {
+                    layoutManager = GridLayoutManager(activity, 2)
+                    adapter = CartProductsAdapter(products)
+                    root.progressBar.visibility = View.GONE
+                }
             }
         }
 
         root.checkout.setOnClickListener {
             doAsync {
                 dao.deleteAll()
+                val products = dao.getAll()
                 uiThread {
-                    AlertDialog.Builder(activity!!.applicationContext)
+                    AlertDialog.Builder(activity)
                         .setMessage("Your order has been successfully placed!")
                         .setPositiveButton("OK") { _, _ ->
-
+                            root.recycler_view.apply {
+                                layoutManager = GridLayoutManager(activity, 2)
+                                adapter = CartProductsAdapter(products)
+                                root.progressBar.visibility = View.GONE
+                            }
                         }
                         .create()
                         .show()
@@ -54,7 +61,13 @@ class CartFragment : Fragment() {
             val context = this
             doAsync {
                 dao.deleteAll()
+                val products = dao.getAll()
                 uiThread {
+                    root.recycler_view.apply {
+                        layoutManager = GridLayoutManager(activity, 2)
+                        adapter = CartProductsAdapter(products)
+                        root.progressBar.visibility = View.GONE
+                    }
                 }
             }
         }
