@@ -23,7 +23,12 @@
             </intent-filter>
         </activity>
         <activity
+            android:label="Product Details"
             android:name=".ProductDetailsActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:label="Your Cart"
+            android:name=".CartActivity"
             android:parentActivityName=".MainActivity"/>
     </application>
 

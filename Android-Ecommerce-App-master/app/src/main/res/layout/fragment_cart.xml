@@ -1,109 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#0F3154">
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#0F3154"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:layout_centerHorizontal="true">
 
     <TextView
-        android:id="@+id/contact_form_title"
+        android:id="@+id/cartText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
-        android:text="Buy Tokens"
+        android:text=""
         android:textColor="#fff"
-        android:textSize="40sp"
-        android:typeface="serif"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:text="1 Token                   =        €2"
-        android:textAlignment="textStart"
-        android:textColor="#fff"
-        android:textSize="24sp"
-        android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="10 Tokens               =        €20"
-        android:textColor="#fff"
-        android:textSize="24sp"
-        android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="334dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="4dp"
-        android:text="50 + 2 Tokens         =        €100"
-        android:textColor="#fff"
-        android:textSize="24sp"
-        android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/Buy1"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:textSize="15sp"
+        android:typeface="serif" />
 
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="334dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="36dp"
-        android:text="100 + 5 Tokens       =        €200"
-        android:textColor="#fff"
-        android:textSize="24sp"
-        android:typeface="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/Buy1"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#0F3154"
+        android:paddingLeft="4.0dip"
+        android:paddingTop="5.0dip"
+        android:paddingRight="4.0dip"
+        android:paddingBottom="1.0dip"
+        android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="374dp"
-        android:layout_marginTop="256dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/mealdeal" />
-
-    <Button
-        android:id="@+id/Buy1"
-        style="@style/Widget.AppCompat.ActionButton"
-        android:layout_width="339dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="-88dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Buy Now"
-        android:textColor="#fff"
-        android:textSize="20dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.969" />
+        <Button
+            android:id="@+id/Checkout"
+            style="@style/Widget.AppCompat.ActionButton"
+            android:layout_width="0.0dip" android:layout_height="fill_parent"
+            android:background="@color/colorPrimaryDark"
+            android:text="Checkout"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:layout_weight="1.0" />
 
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/Clear"
+            style="@style/Widget.AppCompat.ActionButton"
+            android:layout_width="0.0dip" android:layout_height="fill_parent"
+            android:background="@color/colorPrimaryDark"
+            android:text="Clear"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:layout_weight="1.0" />
+    </LinearLayout>
+
+</RelativeLayout>

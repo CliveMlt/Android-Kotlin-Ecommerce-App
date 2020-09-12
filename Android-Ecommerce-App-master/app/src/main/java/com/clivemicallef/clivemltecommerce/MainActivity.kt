@@ -1,5 +1,6 @@
 package com.clivemicallef.clivemltecommerce
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.AppCompatActivity
@@ -39,9 +40,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.actionCart -> {
-                    supportFragmentManager.beginTransaction()
-                            .replace(R.id.frameLayout, CartFragment())
-                            .commit()
+                    startActivity(Intent(this, CartActivity::class.java))
                 }
 
             }
