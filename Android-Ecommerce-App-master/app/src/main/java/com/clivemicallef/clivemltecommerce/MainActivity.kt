@@ -43,9 +43,6 @@ class MainActivity : AppCompatActivity() {
                             .commit()
                 }
 
-               // R.id.actionShorts -> {
-               //     d("Clive", "shorts was pressed!")
-               // }
             }
             it.isChecked = true
             drawerLayout.closeDrawers()
